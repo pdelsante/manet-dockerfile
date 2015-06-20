@@ -1,5 +1,5 @@
 # manet-dockerfile
-Manet is a website screenshot service provided by Node.js, SlimerJS and PhantomJS. It was created by Vladislav Bauer and its source code can be found here: https://github.com/vbauer/manetvhttps://github.com/vbauer/manet
+Manet is a website screenshot service provided by Node.js, SlimerJS and PhantomJS. It was created by Vladislav Bauer and its source code can be found here: https://github.com/vbauer/manet
 
 This Dockerfile allows you to run Manet inside a Docker container. To use it, start it as usual:
 
