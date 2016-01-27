@@ -24,10 +24,10 @@ EXPOSE 8891
 
 RUN apt-get update && \
     apt-get -y install curl && \
-    curl -sL https://deb.nodesource.com/setup | sudo bash - && \
+    curl -sL https://deb.nodesource.com/setup_4.x | sudo bash - && \
     apt-get -y install nodejs build-essential xvfb libfontconfig1 && \
-    npm install -g slimerjs && \
-    npm install -g phantomjs && \
-    npm install -g manet
+    npm install -g slimerjs@0.9.6-2 && \
+    npm install -g phantomjs@1.9.19 && \
+    npm install -g manet@0.4.8
 
 ENTRYPOINT ["/usr/bin/manet"]
