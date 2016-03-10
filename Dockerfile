@@ -18,7 +18,7 @@
 #    http://172.17.0.1:8891
 #
 FROM ubuntu:14.04
-MAINTAINER pietro.delsante@gmail.com
+MAINTAINER pietro.delsante_AT_gmail.com
 ENV DEBIAN_FRONTEND noninteractive
 EXPOSE 8891
 
@@ -28,6 +28,6 @@ RUN apt-get update && \
     apt-get -y install nodejs build-essential xvfb libfontconfig1 && \
     npm install -g slimerjs@0.9.6-2 && \
     npm install -g phantomjs@1.9.19 && \
-    npm install -g manet@0.4.8
+    npm install -g manet@0.4.10
 
 ENTRYPOINT ["/usr/bin/manet"]
