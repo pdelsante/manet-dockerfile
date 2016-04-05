@@ -3,7 +3,7 @@ Manet is a website screenshot service provided by Node.js, SlimerJS and PhantomJ
 
 This Dockerfile allows you to run Manet inside a Docker container. To use it, create a new instance as usual:
 
-    $ sudo docker run --name=manet -p=8891:88891 pdelsante/manet
+    $ sudo docker run --name=manet -p=8891:8891 pdelsante/manet
 
 Now you can connect to:
 
