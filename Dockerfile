@@ -26,7 +26,7 @@ RUN apt-get update && \
     apt-get -y install --no-install-recommends \
     	    nodejs build-essential xvfb libfontconfig1 ca-certificates npm && \
     npm install -g slimerjs@1.0.0 && \
-    npm install -g phantomjs@2.1.7 && \
+    npm install -g phantomjs-prebuilt@2.1.16 && \
     npm install -g manet@0.4.21 && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
