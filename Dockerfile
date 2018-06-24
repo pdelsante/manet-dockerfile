@@ -17,17 +17,17 @@
 # Now you can connect to:
 #    http://172.17.0.1:8891
 #
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER pietro.delsante_AT_gmail.com
 ENV DEBIAN_FRONTEND noninteractive
 EXPOSE 8891
 
 RUN apt-get update && \
-    apt-get -y install curl && \
-    curl -sL https://deb.nodesource.com/setup_4.x | /bin/bash - && \
-    apt-get -y install nodejs build-essential xvfb libfontconfig1 && \
-    npm install -g slimerjs@0.906.2 && \
+    apt-get -y install --no-install-recommends \
+    	    nodejs build-essential xvfb libfontconfig1 ca-certificates npm && \
+    npm install -g slimerjs@1.0.0 && \
     npm install -g phantomjs@2.1.7 && \
-    npm install -g manet@0.4.15
+    npm install -g manet@0.4.21 && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ENTRYPOINT ["/usr/bin/manet"]
+ENTRYPOINT ["/usr/local/bin/manet", "--port", "8891"]
